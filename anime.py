@@ -19,7 +19,7 @@ def titlescore(x, y):
             print(anime_list[name]["title"])
             print(anime_list[name]["score"])
             great += 1
-    print(f"There are {great} anime with a score of above 9.0. ")
+    print(f"There are {great} anime with a score of above 9.00. ")
 
 titlescore(0, len(anime_list))
 
@@ -30,7 +30,15 @@ titlescore(0, len(anime_list))
 # Calculate and print the average score of all the anime
 # in the list. Round the answer to 2 decimal places.
 # ------------------------------------------------------------
+def average(x, y):
+    divide = 0
+    total = 0
+    for add in range(x, y):
+        total += anime_list[add]["score"]
+        divide += 1
+    print(f"The average score of all the anime in this list is {total / divide:.2f}. ")
 
+average(0, len(anime_list))
 
 
 
@@ -41,7 +49,17 @@ titlescore(0, len(anime_list))
 # Hint: look closely at the "episodes" values. Does every
 # anime have a number?
 # ------------------------------------------------------------
+def maximum(x, y):
+    winner = []
+    for high in range(x, y):
+            if anime_list[high]["episodes"] == int:
+                winner.append(anime_list[high]["episodes"])
+    
+    print(winner)
 
+maximum(0, len(anime_list))
+                
+            
 
 
 
