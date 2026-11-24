@@ -52,11 +52,9 @@ average(0, len(anime_list))
 def maximum(x, y):
     winner = []
     for high in range(x, y):
-            if anime_list[high]["episodes"] == int:
-                winner.append(anime_list[high]["episodes"])
-    
-    print(winner)
-
+        if anime_list[high]["episodes"] is not None:
+            winner.append(anime_list[high]["episodes"])
+    print(max(winner))
 maximum(0, len(anime_list))
                 
             
