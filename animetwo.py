@@ -49,21 +49,33 @@ average(0, len(anime_list))
 # Hint: look closely at the "episodes" values. Does every
 # anime have a number?
 # ------------------------------------------------------------
-def max(x, y):
+def maximum(x, y):
     winner = []
-    if anime_list[1]["episodes"] < anime_list[2]["episodes"]:
-        winner.append(anime_list[2]["episodes"])
-    
     for high in range(x, y):
-            try:
-                if anime_list[high]["episodes"] < anime_list[high - 1]["episodes"]:
-                    winner.append(anime_list[high - 1]["episodes"])
-            except TypeError:
-                continue
-    print(winner)
+        if anime_list[high]["episodes"] is not None:
+            winner.append(anime_list[high]["episodes"])
+    for high in range(x, y):
+        if max(winner) == anime_list[high]["episodes"]:
+            print(f"The anime with the most episodes is {anime_list[high]['title']} with {anime_list[high]['episodes']} episodes. ")
+maximum(0, len(anime_list))
+                
+            
 
 
-max(2, len(anime_list))
+
+# ------------------------------------------------------------
+# Q4. Nested lists
+# Each anime has a "genres" list. Each item in that list is a
+# dictionary with a "name" key (for example, "Comedy").
+# Print the title of every anime that has the genre "Comedy".
+# -----------------------------------------------------------
+def find(x, y):
+    for genre in range(x, y):
+        for ah in range(len(anime_list["genres"])):
+            print(anime_list[genre]["genres"][ah]['name'])
+
+
+find(0, len(anime_list))
                 
             
 
