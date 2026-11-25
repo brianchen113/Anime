@@ -71,7 +71,8 @@ maximum(0, len(anime_list))
 # -----------------------------------------------------------
 def find(x, y):
     for genre in range(x, y):
-        if "Comedy" in anime_list[genre]["genres"]:
-            print(anime_list[genre]["genres"])
+        for ah in range(len(anime_list["genres"])):
+            print(anime_list[genre]["genres"][ah]['name'])
+
 
 find(0, len(anime_list))
