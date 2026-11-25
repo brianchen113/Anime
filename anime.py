@@ -54,7 +54,9 @@ def maximum(x, y):
     for high in range(x, y):
         if anime_list[high]["episodes"] is not None:
             winner.append(anime_list[high]["episodes"])
-    print(max(winner))
+    for high in range(x, y):
+        if max(winner) == anime_list[high]["episodes"]:
+            print(f"The anime with the most episodes is {anime_list[high]['title']} with {anime_list[high]['episodes']} episodes. ")
 maximum(0, len(anime_list))
                 
             
