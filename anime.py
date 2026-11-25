@@ -69,3 +69,13 @@ maximum(0, len(anime_list))
 # dictionary with a "name" key (for example, "Comedy").
 # Print the title of every anime that has the genre "Comedy".
 # ------------------------------------------------------------
+def genres(x, y):
+    for genres in range(x, y):
+        print(anime_list[genres]["genres"]['name'])
+        try:
+            if "Comedy" in anime_list[genres]["genres"]['name']:
+                print(anime_list[genres]["title"])
+        except TypeError:
+                continue
+
+genres(0, len(anime_list))
