@@ -70,9 +70,9 @@ maximum(0, len(anime_list))
 # Print the title of every anime that has the genre "Comedy".
 # -----------------------------------------------------------
 def find(x, y):
-    for genre in range(x, y):
-        for ah in range(len(anime_list["genres"])):
-            print(anime_list[genre]["genres"][ah]['name'])
+    for genre in anime_list["genres"]:
+        if "Comedy" in genre["name"]: 
+            print(anime_list[genre]["title"])
 
 
 find(0, len(anime_list))
