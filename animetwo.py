@@ -71,9 +71,10 @@ maximum(0, len(anime_list))
 # -----------------------------------------------------------
 def find(x, y):
     for genre in range(x, y):
-        for ah in range(len(anime_list["genres"])):
-            print(anime_list[genre]["genres"][ah]['name'])
-
+       try:
+        print(anime_list[genre]["genres"])
+       except TypeError:
+           continue
 
 find(0, len(anime_list))
                 
