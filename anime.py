@@ -3,7 +3,9 @@ import json
 with open("jikan.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
-anime_list = data["data"]   # a list of 25 anime (each one is a dictionary)
+anime_list = data["data"]
+genre_list = data["data"][25]["genres"]
+   # a list of 25 anime (each one is a dictionary)
 
 
 # ------------------------------------------------------------
@@ -70,9 +72,10 @@ maximum(0, len(anime_list))
 # Print the title of every anime that has the genre "Comedy".
 # -----------------------------------------------------------
 def find(x, y):
-    for genre in anime_list["genres"]:
+    for genre in genre_list:
+        print(genre["name"])
         if "Comedy" in genre["name"]: 
-            print(anime_list[genre]["title"])
+            print(genre["name"])
 
 
-find(0, len(anime_list))
+find(0, len(genre_list))
